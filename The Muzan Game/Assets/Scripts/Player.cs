@@ -19,11 +19,19 @@ public class Player : MonoBehaviour
         nameText.text = "Ruler: " + playerName;
 
         gameManager = GetComponent<GameplayManager>();
-     }
+    }
 
     // Update is called once per frame
     void Update()
     {
         yearText.text = "Year: " + gameManager.year;
+
+        if (gameManager.population > highestPop)
+        {
+            highestPop = gameManager.population;
+            highestPopText.text = "highest Population: " + highestPop;
+        }
     }
 }
+
+
