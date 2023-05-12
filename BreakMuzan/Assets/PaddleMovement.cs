@@ -8,15 +8,15 @@ public class PaddleMovement : MonoBehaviour
     public float speed;    
     private void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector2.up * Time.deltaTime * speed);
+            transform.Translate(Vector2.right * Time.deltaTime * speed);
         }
 
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Vector2.down * Time.deltaTime * speed);
+            transform.Translate(Vector2.left * Time.deltaTime * speed);
 
 
         }
