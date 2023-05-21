@@ -1,11 +1,12 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaddleMovement : MonoBehaviour
+public class Player : MonoBehaviour
 
 {
-    public float speed;    
+    public float speed;
     private void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow))
@@ -23,6 +24,3 @@ public class PaddleMovement : MonoBehaviour
     }
 }
 
-    
-
-  
