@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b658826e77157964187f772973cca0df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rockPrefab: {fileID: 1549949502096435151, guid: df1d728f74af4664780fa1ee96ef7fb2, type: 3}
 --- !u!4 &11918254
 Transform:
   m_ObjectHideFlags: 0
@@ -167,11 +168,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &433718278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4852549329705188377, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-  m_PrefabInstance: {fileID: 533866500}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,63 +252,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &533866500
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4852549329705188377, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_Name
-      value: bullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.174
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.741
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852549329705188379, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
 --- !u!1 &1629114790
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 1629114790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.46, y: -1.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -447,7 +386,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13013625, y: 0.025026202}
+  m_Offset: {x: -0.08496839, y: 0.041750252}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -458,7 +397,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8593302, y: 0.54952884}
+  m_Size: {x: 0.0001, y: 0.29037225}
   m_EdgeRadius: 0
 --- !u!114 &1629114796
 MonoBehaviour:
@@ -472,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa42f62e002e6847916879e1e2b3b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSpeed: 200
-  moveSpeed: 5
-  maxSpeed: 5
-  bulletPrefab: {fileID: 433718278}
+  lookSpeed: 300
+  moveSpeed: 10
+  maxSpeed: 10
+  bulletPrefab: {fileID: 4852549329705188377, guid: 4bdd6899192d8fb44b68ec83a7fe06dd, type: 3}
