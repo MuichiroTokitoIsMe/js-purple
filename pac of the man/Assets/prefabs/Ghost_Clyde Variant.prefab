@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168948384525574945, guid: e726a959c2ed4f64cbfff975b05814b6, type: 3}
       propertyPath: m_Name
-      value: Ghost_Clyde
+      value: Ghost_Clyde Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1168948384525574956, guid: e726a959c2ed4f64cbfff975b05814b6, type: 3}
       propertyPath: m_RootOrder
@@ -29,15 +29,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168948384525574956, guid: e726a959c2ed4f64cbfff975b05814b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8007181
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1168948384525574956, guid: e726a959c2ed4f64cbfff975b05814b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.58415055
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1168948384525574956, guid: e726a959c2ed4f64cbfff975b05814b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.051873405
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1168948384525574956, guid: e726a959c2ed4f64cbfff975b05814b6, type: 3}
       propertyPath: m_LocalRotation.w
