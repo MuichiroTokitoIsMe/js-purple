@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Pacman : Movement
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    protected override void ChildUpdate()
     {
-        
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            Setdirection(new Vector2(horizontal, vertical));
+        }
+        transform.right = direction;
     }
+    
 }

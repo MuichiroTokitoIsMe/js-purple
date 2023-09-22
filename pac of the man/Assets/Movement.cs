@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public abstract class Movement : MonoBehaviour
 {
     public float speed;
     public Vector2 initialDirection;
@@ -11,7 +11,14 @@ public class Movement : MonoBehaviour
     protected Rigidbody2D rb;
     protected Vector2 direction;
     protected Vector2 nextDirection;
+
     // Start is called before the first frame update
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        direction = initialDirection;
+        nextDirection = Vector2.zero;
+    }
 
     private void FixedUpdate()
     {
@@ -19,16 +26,6 @@ public class Movement : MonoBehaviour
         Vector2 translation = direction * speed * Time.fixedDeltaTime;
 
         rb.MovePosition(position + translation);
-    }
-
-    public class Pacman : Movement
-    {
-
-    }
-
-    void Start()
-    {
-       
     }
 
     // Update is called once per frame
@@ -39,7 +36,7 @@ public class Movement : MonoBehaviour
         return hit.collider != null;
     }
 
- protected void Setdirection(Vector2 newDirection)
+    protected void Setdirection(Vector2 newDirection)
     {
         if (!Occupied(newDirection))
         {
@@ -48,11 +45,18 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            nextDirection = newDirection
+            nextDirection = newDirection;
         }
     }
     void Update()
     {
-        
+        if (nextDirection != Vector2.zero)
+        {
+            Setdirection(nextDirection);
+        }
+
+        ChildUpdate();
+
     }
+    abstract protected void ChildUpdate();
 }
