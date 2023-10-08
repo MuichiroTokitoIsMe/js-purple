@@ -15,7 +15,12 @@ public class Ghost : Movement
 
     private void Awake()
     {
-        
+        body.SetActive(true);
+        eyes.SetActive(true);
+        blue.SetActive(false);
+        white.SetActive(false);
+        frightened = false;
+        Invoke("Leavehome", homeDuration);
     }
 
     protected override void ChildUpdate()
@@ -25,7 +30,10 @@ public class Ghost : Movement
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (atHome && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            Setdirection(-direction);
+        }   
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,12 +45,31 @@ public class Ghost : Movement
             int index = Random.Range(0, node.availableDirections.Count);
 
             Setdirection(node.availableDirections[index]);
+            
+            if (node.availableDirections[index] == -direction)
+            {
+                index += 1;
+
+                if (index == node.availableDirections.Count)
+                {
+                    index = 0;
+                }
+            }
+
+            Setdirection(node.availableDirections[index]);
         }
     }
 
     private void Leavehome ()
     {
-
+        transform.position = new Vector3(0, 2.5f, -1f);
+        direction = new Vector2(-1, 0);
+        atHome = false;
+        frightened = false;
+        body.SetActive(true);
+        eyes.SetActive(true);
+        blue.SetActive(false);
+        white.SetActive(false);
     }
 
     public void Frighten()
@@ -59,4 +86,8 @@ public class Ghost : Movement
     {
         
     }
+    
+    
 }
+
+   
