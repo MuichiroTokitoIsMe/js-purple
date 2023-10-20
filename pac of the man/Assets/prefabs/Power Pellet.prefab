@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7303432320632789552}
   - component: {fileID: 4619022094718889999}
   - component: {fileID: 864978174752572673}
+  - component: {fileID: -3558378255221225433}
   m_Layer: 8
   m_Name: Power Pellet
   m_TagString: Untagged
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-3558378255221225433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428511437894978765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0fc0265ca7e77643a31bdf297d048e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

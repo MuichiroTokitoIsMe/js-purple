@@ -51,6 +51,7 @@ public class Ghost : Movement
             else
             {
                 Destroy(collision.gameObject);
+                Destroy(collision.gameObject);
             }
         }
     }
@@ -121,6 +122,11 @@ public class Ghost : Movement
         blue.SetActive(false);
         white.SetActive(false);
     }
+
+    int joc = 1;
+    float jocs = 5f;
+    bool isCool = true;
+    string text = "hi";
     
     
 }
